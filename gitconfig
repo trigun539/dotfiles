@@ -1,0 +1,49 @@
+[core]
+	autocrlf = input
+  pager = less -FRX
+
+[push]
+  default = current
+
+[status]
+	short = true
+
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+  branch = false
+
+[interactive]
+  diffFilter = delta --color-only --features=interactive
+
+[delta]
+  features = decorations
+
+[delta "interactive"]
+  keep-plus-minus-markers = false
+
+[delta "decorations"]
+  commit-decoration-style = blue ol
+  commit-style = raw
+  file-style = omit
+  hunk-header-decoration-style = blue box
+  hunk-header-file-style = red
+  hunk-header-line-number-style = "#067a00"
+  hunk-header-style = file line-number syntax
+
+[http]
+	postBuffer = 524288000
+[mergetool]
+	keepBackup = false
+[diff]
+	mnemonicprefix = true
+[merge]
+	stat = true
+[credential]
+	helper = osxkeychain
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[feature]
+	manyFiles = 1

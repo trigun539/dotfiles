@@ -1,0 +1,4 @@
+mkdir -p ~/.config
+mkdir -p ~/.nvm
+mkdir -p ~/.vim
+mkdir -p ~/.tmux
