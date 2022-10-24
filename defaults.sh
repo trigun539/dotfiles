@@ -25,6 +25,7 @@ if has_consent; then
   e_pending "Inceasing key repeat"
   defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
   defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+  defaults write -g ApplePressAndHoldEnabled -bool false # Disable press and hold
 fi
 
 get_consent "Re-sort Launchpad applications"
