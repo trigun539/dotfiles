@@ -79,7 +79,7 @@ nvim_lsp.tsserver.setup({
 })
 
 -- Python
-nvim_lsp.pyright.setup({
+nvim_lsp.pylsp.setup({
 	capabilities = capabilities, -- For comp, completion integration
 	on_attach = on_attach,
 })

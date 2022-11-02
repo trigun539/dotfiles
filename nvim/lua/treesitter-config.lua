@@ -31,6 +31,7 @@ treesitter.setup({
 		"fennel",
 		"prisma",
 		"dockerfile",
+		"python",
 	},
 	rainbow = {
 		enable = true,
