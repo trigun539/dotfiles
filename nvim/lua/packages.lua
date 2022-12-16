@@ -81,6 +81,15 @@ return require("packer").startup(function(use)
 		use("tpope/vim-dispatch")
 		use("clojure-vim/vim-jack-in")
 		use("radenling/vim-dispatch-neovim")
+		-- AI
+		use({
+			"jackMort/ChatGPT.nvim",
+			requires = {
+				"MunifTanjim/nui.nvim",
+				"nvim-lua/plenary.nvim",
+				"nvim-telescope/telescope.nvim",
+			},
+		})
 	end
 
 	-- Automatically set up your configuration after cloning packer.nvim

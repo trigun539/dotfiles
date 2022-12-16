@@ -8,10 +8,10 @@ nnoremap("<leader>fg", "<cmd>lua require('telescope.builtin').git_files()<CR>", 
 nnoremap("<leader>fb", ":Telescope file_browser<CR>", "silent", "File Browser")
 nnoremap("<leader>f/", "<cmd>lua require('telescope.builtin').buffers()<CR>", "silent", "Buffers")
 nnoremap(
-  "<leader>fz",
-  "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>",
-  "silent",
-  "Find in buffer"
+	"<leader>fz",
+	"<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>",
+	"silent",
+	"Find in buffer"
 )
 nnoremap("<leader>ft", "<cmd>lua require('telescope.builtin').help_tags()<CR>", "silent", "Help Tags")
 nnoremap("<leader>fs", "<cmd>lua require('telescope.builtin').grep_string()<CR>", "silent", "Grep String")
@@ -57,3 +57,8 @@ nnoremap("<leader>leb", ":ConjureEvalBuf<CR>", "silent", "Clojure Eval Buffer")
 nnoremap("<leader>lee", ":ConjureEvalCurrentForm<CR>", "silent", "Clojure Eval Current Form")
 nnoremap("<leader>ler", ":ConjureEvalRootForm<CR>", "silent", "Clojure Eval Root")
 vnoremap("<leader>lE", ":ConjureEvalVisual<CR>", "silent", "Clojure Eval Visual")
+
+-- ChatGPT
+
+nnoremap("<leader>ce", ":ChatGPT<CR>", "silent", "Open ChatGPT")
+nnoremap("<leader>ct", ":ChatGPTActAs<CR>", "silent", "Open ChatGPT As")

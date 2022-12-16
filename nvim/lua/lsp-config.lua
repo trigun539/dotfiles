@@ -82,6 +82,16 @@ nvim_lsp.tsserver.setup({
 nvim_lsp.pylsp.setup({
 	capabilities = capabilities, -- For comp, completion integration
 	on_attach = on_attach,
+	settings = {
+		pylsp = {
+			plugins = {
+				pycodestyle = {
+					ignore = { "W391" },
+					maxLineLength = 100,
+				},
+			},
+		},
+	},
 })
 
 -- Lua
