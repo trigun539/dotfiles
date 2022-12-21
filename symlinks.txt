@@ -10,3 +10,4 @@ ln -s ~/dotfiles/tmux/themes ~/tmux-themes
 ln -s ~/dotfiles/utils.zsh ~/.oh-my-zsh/custom/utils.zsh
 ln -s ~/dotfiles/base.zsh ~/.oh-my-zsh/custom/base.zsh
 ln -s ~/dotfiles/.prettierrc ~/.prettierrc
+ln -s ~/dotfiles/.taskrc ~/.taskrc
