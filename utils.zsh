@@ -190,3 +190,8 @@ cljn() {
     --interactive
 }
 
+# ------------------------------------
+# Task utils
+# ------------------------------------
+
+alias tskui="taskwarrior-tui"
