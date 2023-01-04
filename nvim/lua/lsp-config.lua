@@ -81,7 +81,6 @@ nvim_lsp.tsserver.setup({
 -- Python
 nvim_lsp.pylsp.setup({
 	capabilities = capabilities, -- For comp, completion integration
-	on_attach = on_attach,
 	settings = {
 		pylsp = {
 			plugins = {
@@ -92,6 +91,12 @@ nvim_lsp.pylsp.setup({
 			},
 		},
 	},
+	on_attach = function(client, bufnr)
+		-- formatting
+		vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+
+		on_attach(client, bufnr)
+	end,
 })
 
 -- Lua
