@@ -32,6 +32,7 @@ treesitter.setup({
 		"prisma",
 		"dockerfile",
 		"python",
+		"ruby",
 	},
 	rainbow = {
 		enable = true,
