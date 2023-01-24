@@ -24,16 +24,11 @@ This sets up a pretty good dev environment which focuses on the terminal. Using 
 
 ## General Tools
 
-- Slack
-- Zoom
 - Docker
 - Karabiner-Elements
 - Flux
 - Spectacle
-- Spotify
 - VS Code
-- Discord
-- Alfred
 
 ## Install Instructions
 
@@ -43,6 +38,7 @@ This sets up a pretty good dev environment which focuses on the terminal. Using 
 
 # Last steps
 
+- Run `brew bundle` to install all brew packages
 - Install `base16-manager` themes
   ```bash
   base16-manager install chriskempson/base16-shell
