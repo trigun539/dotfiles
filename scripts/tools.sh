@@ -31,37 +31,6 @@ e_pending "Installing node LTS"
 
 nvm install --lts
 
-# ------------------------------------------------------------------------------
-e_pending "Cloning tools git repos"
-# ------------------------------------------------------------------------------
-
-mkdir -p ~/.oh-my-zsh/custom
-
-# TODO: check that repos haven't already been cloned, perform git pull instead
-
-if has_command "zsh"; then
-  if ! has_path ".oh-my-zsh/plugins/zsh-autosuggestions"; then
-    get_consent "Install zsh-autosuggestions"
-    if has_consent; then
-      e_pending "Installing zsh-autosuggestions"
-      git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
-      test_path ".oh-my-zsh/plugins/zsh-autosuggestions"
-    fi
-  fi
-fi
-
-if has_command "zsh"; then
-  if ! has_path ".oh-my-zsh/plugins/zsh-syntax-highlighting"; then
-    get_consent "Install zsh-syntax-highlighting"
-    if has_consent; then
-      e_pending "Install zsh-syntax-highlighting"
-      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
-      test_path ".oh-my-zsh/plugins/zsh-syntax-highlighting"
-    fi
-  fi
-fi
-
-
 if has_command "zsh"; then
   if ! has_path ".config/tmux-powerline"; then
     get_consent "Install tmux-powerline"

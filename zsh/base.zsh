@@ -73,6 +73,13 @@ ZSH_THEME="robbyrussell"
 base16-manager set dracula
 
 ############################################################################
+# Android SDK
+############################################################################
+export ANDROID_HOME=~/Library/Android/sdk
+export ANDROID_SDK_ROOT=~/Library/Android/sdk
+export ANDROID_AVD_HOME=~/.android/avd
+
+############################################################################
 # GIT
 ############################################################################
 
@@ -80,8 +87,3 @@ base16-manager set dracula
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-plugins=(
-  git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)

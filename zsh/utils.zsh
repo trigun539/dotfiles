@@ -36,17 +36,17 @@ tpl() { tmuxp load $1; }
 # Git utils
 # ------------------------------------
 
-alias gs="git status"
-alias gb="git branch"
-alias gc="git checkout"
-alias gcb="git checkout -b "
-alias ga="git add -A ."
-alias gpull="git pull"
-alias gpush="git push"
-alias gcm="git commit -m "
-alias gac="git add -A . && git commit -m "
-alias gamend="git commit --amend --no-edit"
-gbclean() { git branch | grep -v $1 | xargs git branch -D; }
+# alias gs="git status"
+# alias gb="git branch"
+# alias gc="git checkout"
+# alias gcb="git checkout -b "
+# alias ga="git add -A ."
+# alias gpull="git pull"
+# alias gpush="git push"
+# alias gcm="git commit -m "
+# alias gac="git add -A . && git commit -m "
+# alias gamend="git commit --amend --no-edit"
+# gbclean() { git branch | grep -v $1 | xargs git branch -D; }
 
 # ------------------------------------
 # Docker alias and function
