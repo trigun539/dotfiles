@@ -1,6 +1,23 @@
 -- KEY BINDINGS
 
-require("mapx").setup({ global = true })
+require("mapx").setup({ global = "force" })
+
+-- Utils
+
+-- Move selected lines up/down
+vnoremap("J", ":m '>+1<CR>gv=gv")
+vnoremap("K", ":m '<-2<CR>gv=gv")
+
+-- Keep cursor same place while scrolling
+nnoremap("<C-d>", "<C-d>zz")
+nnoremap("<C-u>", "<C-u>zz")
+
+-- Keep search term in middle
+nnoremap("n", "nzz")
+nnoremap("N", "Nzz")
+
+-- Replace without losing clipboard
+xnoremap("<leader>p", "\"_dP")
 
 -- Telescope
 nnoremap("<leader>ff", "<cmd>lua require('telescope.builtin').find_files({hidden = true})<CR>", "silent", "Files")
@@ -19,6 +36,9 @@ nnoremap("<leader>fr", "<cmd>lua require('telescope.builtin').live_grep()<CR>", 
 nnoremap("<leader>fx", "<cmd>lua require('telescope-config').search_dotfiles()<CR>", "silent", "Search dotfiles")
 nnoremap("<leader>fd", "<cmd>lua require('telescope-config').git_branches()<CR>", "silent", "Git Branches")
 nnoremap("<leader>fx", "<cmd>lua require('telescope-config').dir_grep()<CR>", "silent", "Grep in Dir")
+nnoremap("<leader>fw", function()
+  require("telescope.builtin").grep_string({ search = vim.fn.input("Grep >")})
+end, "silent", "Grep Text")
 
 -- Nvim Tree
 nnoremap("<C-e>", ":NvimTreeToggle<CR>", "silent", "Open File Browser")
@@ -34,29 +54,6 @@ nnoremap("<leader>gc", ":Git commit<CR>", "silent", "Git commit")
 nnoremap("<leader>gp", ":Git push<CR>", "silent", "Git commit")
 
 -- LSP
-
--- LSP: Saga
-nnoremap("<leader>ke", ":Lspsaga show_line_diagnostics<CR>", "silent", "LSP Show Line Diagnostics")
-nnoremap("<leader>ka", ":Lspsaga code_action<CR>", "silent", "LSP Code Action")
-nnoremap("<leader>ki", ":TSLspOrganize<CR>", "silent", "LSP Organize Imports")
-
--- LSP: Trouble
-nnoremap("<leader>kx", ":TroubleToggle<CR>", "silent", "Trouble Toggle")
-nnoremap("<leader>kw", ":TroubleToggle workspace_diagnostics<CR>", "silent", "LSP Trouble Toggle Workspace Diagnostics")
-nnoremap("<leader>kd", ":TroubleToggle document_diagnostics<CR>", "silent", "LSP Trouble Toggle Document Diagnostics")
-nnoremap("<leader>kq", ":TroubleToggle quickfix<CR>", "silent", "LSP Trouble Quickfix")
-nnoremap("<leader>kl", ":TroubleToggle loclist<CR>", "silent", "LSP Trouble Quickfix")
-
--- LSP: Toggle
-nnoremap("<leader>kt", ":ToggleDiag<CR>", "silent", "LSP Toggle Diagnostics")
-
--- Conjure
-nnoremap("<leader>lc", ":ConjureConnect<CR>", "silent", "Clojure Connect")
-nnoremap("<leader>lv", ":ConjureLogVSplit<CR>", "silent", "Clojure Log VSplit")
-nnoremap("<leader>leb", ":ConjureEvalBuf<CR>", "silent", "Clojure Eval Buffer")
-nnoremap("<leader>lee", ":ConjureEvalCurrentForm<CR>", "silent", "Clojure Eval Current Form")
-nnoremap("<leader>ler", ":ConjureEvalRootForm<CR>", "silent", "Clojure Eval Root")
-vnoremap("<leader>lE", ":ConjureEvalVisual<CR>", "silent", "Clojure Eval Visual")
 
 -- ChatGPT
 

@@ -60,6 +60,11 @@ vim.opt.tm = 500
 vim.opt.lazyredraw = true -- Don't redraw while executing macros
 vim.opt.ttyfast = true -- Faster redrawing
 
+-- Search
+
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
 -- Clipboard
 
 vim.opt.clipboard = 'unnamed'

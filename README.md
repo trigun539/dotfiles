@@ -4,7 +4,8 @@ This sets up a pretty good dev environment which focuses on the terminal. Using 
 
 ## Prerequisites
 
-- Install Xcode
+- Install Xcode and run `xcode-install`
+
 
 ## Terminal Tools
 
@@ -42,7 +43,6 @@ This sets up a pretty good dev environment which focuses on the terminal. Using 
 - Install `base16-manager` themes
   ```bash
   base16-manager install chriskempson/base16-shell
-  base16-manager install chriskempson/base16-vim
   ```
 - Open neovim by running: `nvim`:
   - Run `:PackerInstall`.

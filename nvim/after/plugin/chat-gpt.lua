@@ -1,4 +1,3 @@
--- Setup nvim-cmp.
 local ChatGPT = require("chatgpt")
 
 ChatGPT.setup({

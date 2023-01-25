@@ -1,12 +1,12 @@
 @typescript-eslint/eslint-plugin
 @typescript-eslint/parser
+bash-language-server
 browser-sync
 diagnostic-languageserver
 eslint_d
 eslint-config-prettier
 eslint
 lua-fmt
-n
 neovim
 npm
 prettier

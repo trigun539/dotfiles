@@ -57,7 +57,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 ZSH_THEME="robbyrussell"
 
 # Set default base16 theme
-base16-manager set dracula
+# base16-manager set dracula
 
 ############################################################################
 # Android SDK
