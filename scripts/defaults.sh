@@ -35,12 +35,14 @@ if has_consent; then
   killall Dock
 fi
 
-if ! has_command "xcode-select"; then
+get_consent "Install Xcode tools"
+if has_command "xcode-select"; then
   e_pending "Installing xcode-select (CLI tools)"
   xcode-select --install
   test_command "xcode-select"
 fi
 
+get_consent "Install Homebrew"
 if ! has_command "brew"; then
   e_pending "Installing brew (Homebrew)"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

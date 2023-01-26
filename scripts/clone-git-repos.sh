@@ -3,14 +3,14 @@
 source _utils.sh
 
 # ------------------------------------------------------------------------------
-e_pending "Generating Symlinks"
+e_pending "Cloning Git repos"
 # ------------------------------------------------------------------------------
 
-get_consent "Create symlinks"
+get_consent "Clone git repos"
 if has_consent; then
-  e_pending "Create symlinks"
-  while read -r source link; do 
-    cmd="ln -sf ${source} ${link}"
+  e_pending "Clone git repos"
+  while read -r url dir; do 
+    cmd="git clone ${url} ${dir}"
     eval "$cmd"
-  done < files/symlinks.txt
+  done < files/repos.txt
 fi

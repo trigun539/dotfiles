@@ -1,4 +1,3 @@
-Brewfile.lock.json
 local.zsh
 .DS_Store
 nvim/node_modules

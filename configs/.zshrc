@@ -12,6 +12,9 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+# oh-my-zsh theme
+ZSH_THEME="robbyrussell"
+
 # Insecure completion dependent issue
 ZSH_DISABLE_COMPFIX=true
 

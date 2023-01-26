@@ -3,11 +3,15 @@
 source _utils.sh
 
 # ------------------------------------------------------------------------------
-e_pending "Installing tools"
+e_pending "Installing homebrew modules"
 # ------------------------------------------------------------------------------
 
 if has_command "brew"; then
-  brew bundle
+  get_consent "Install brew packages"
+  if has_consent; then
+    e_pending "Install brew packages"
+    brew bundle --file=~/dotfiles/configs/Brewfile
+  fi
 fi
 
 # ------------------------------------------------------------------------------
@@ -29,47 +33,14 @@ fi
 e_pending "Installing node LTS"
 # ------------------------------------------------------------------------------
 
-nvm install --lts
 
-if has_command "zsh"; then
-  if ! has_path ".config/tmux-powerline"; then
-    get_consent "Install tmux-powerline"
+if has_command "nvm"; then
+  if ! has_path ".nvm/versions/node/"; then
+    get_consent "Install node LTS"
     if has_consent; then
-      e_pending "Install tmux-powerline"
-      git clone https://github.com/erikw/tmux-powerline.git ~/.config/tmux-powerline
-      test_path ".config/tmux-powerline"
+      e_pending "Install node LTS"
+      nvm install --lts
+      test_path ".nvm/versions/node/"
     fi
   fi
 fi
-
-
-if has_command "zsh"; then
-  if ! has_path ".config/base16-shell"; then
-    get_consent "Install base16-shell"
-    if has_consent; then
-      e_pending "Install base16-shell"
-      git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-      test_path ".config/base16-shell"
-    fi
-  fi
-fi
-
-# ------------------------------------------------------------------------------
-e_pending "Python libs"
-# ------------------------------------------------------------------------------
-
-python3 -m pip install --user --upgrade pynvim
-python2 -m pip install --user --upgrade pynvim
-
-# ------------------------------------------------------------------------------
-# e_pending "Gem libs"
-# ------------------------------------------------------------------------------
-
-# gem install neovim
-
-# ------------------------------------------------------------------------------
-# e_pending "Git config"
-# ------------------------------------------------------------------------------
-
-# git config --global core.pager "less -FRX"
-# git config --global push.default current

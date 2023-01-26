@@ -2,7 +2,6 @@
 # GENERAL
 # ------------------------------------
 
-
 if [ exa ];
 then
   alias ll='exa -l --icons'
@@ -31,22 +30,6 @@ ta() { tmux a -t $1; }
 
 export DISABLE_AUTO_TITLE='true'
 tpl() { tmuxp load $1; }
-
-# ------------------------------------
-# Git utils
-# ------------------------------------
-
-# alias gs="git status"
-# alias gb="git branch"
-# alias gc="git checkout"
-# alias gcb="git checkout -b "
-# alias ga="git add -A ."
-# alias gpull="git pull"
-# alias gpush="git push"
-# alias gcm="git commit -m "
-# alias gac="git add -A . && git commit -m "
-# alias gamend="git commit --amend --no-edit"
-# gbclean() { git branch | grep -v $1 | xargs git branch -D; }
 
 # ------------------------------------
 # Docker alias and function
@@ -168,27 +151,6 @@ awsmbp() { aws s3api create-bucket --bucket $1 --region us-east-1 --acl private;
 awsS3Block() { aws s3api put-public-access-block \
     --bucket $1 \
     --public-access-block-configuration "BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true"}
-
-# ------------------------------------
-# UI
-# ------------------------------------
-
-alias b16ls="base16-manager list-themes"
-b16i() { base16-manager install $1}
-b16set() { base16-manager set $1}
-
-
-# ------------------------------------
-# Clojure
-# ------------------------------------
-
-# Start clojure repl
-cljn() {
-  clj -Sdeps '{:deps {nrepl/nrepl {:mvn/version "0.7.0"} cider/cider-nrepl {:mvn/version "0.25.2"}}}' \
-    -m nrepl.cmdline \
-    --middleware '["cider.nrepl/cider-middleware"]' \
-    --interactive
-}
 
 # ------------------------------------
 # Task utils

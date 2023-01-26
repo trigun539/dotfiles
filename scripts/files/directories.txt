@@ -1,0 +1,4 @@
+~/.config
+~/.nvm
+~/.vim
+~/.tmux

@@ -52,12 +52,8 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="robbyrussell"
 
-# Set default base16 theme
-# base16-manager set dracula
+base16_dracula
 
 ############################################################################
 # Android SDK

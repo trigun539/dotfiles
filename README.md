@@ -5,7 +5,13 @@ This sets up a pretty good dev environment which focuses on the terminal. Using 
 ## Prerequisites
 
 - Install Xcode and run `xcode-install`
-
+- Install [homebrew](https://brew.sh)
+  ```bash
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  brew doctor
+  ```
+- Install Git: `brew install git`
+- Clone repo: `git clone git@github.com:trigun539/dotfiles.git`
 
 ## Terminal Tools
 
@@ -18,7 +24,6 @@ This sets up a pretty good dev environment which focuses on the terminal. Using 
 - Tmux
   - Tmux-Powerline
 - Base16 - shell
-- Base16 Manager
 - Oh My ZSH
 - Fira Code Nerd Font
 - git
@@ -35,7 +40,7 @@ This sets up a pretty good dev environment which focuses on the terminal. Using 
 
 - Clone this repo
 - Install `Fira Code Nerd Font` by dragging font files under `fonts/` to `Font Book`
-- Run `sh install.sh`
+- Run `cd scripts && sh install.sh`
 
 # Last steps
 
@@ -57,6 +62,10 @@ This sets up a pretty good dev environment which focuses on the terminal. Using 
 ![](spectacle-settings.png 'Spectacle settings')
 
 - Configure `git` repositories individually with user/email.
+
+## Clean up
+
+Run `sh script/clean.sh` to clean up and remove directories, repos, symlinks added.
 
 ## TODO:
 
