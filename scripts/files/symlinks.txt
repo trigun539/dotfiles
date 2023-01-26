@@ -10,7 +10,6 @@
 ~/dotfiles/karabiner-elements/pc-style-key-bindings.json ~/.config/karabiner/assets/complex_modifications/pc-style-bindings.json
 ~/dotfiles/nvim ~/.config/nvim
 ~/dotfiles/tmux/tmux-powerlinerc ~/.tmux-powerlinerc
-~/dotfiles/tmux/themes ~/tmux-themes
 ~/dotfiles/zsh/base.zsh ~/.oh-my-zsh/custom/base.zsh
 ~/dotfiles/zsh/utils.zsh ~/.oh-my-zsh/custom/utils.zsh
 ~/dotfiles/zsh/local.zsh ~/.oh-my-zsh/custom/local.zsh

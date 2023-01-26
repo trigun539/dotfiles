@@ -1,4 +1,0 @@
-~/.config
-~/.nvm
-~/.vim
-~/.tmux
