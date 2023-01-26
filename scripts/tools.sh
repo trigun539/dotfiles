@@ -30,17 +30,13 @@ if has_command "zsh"; then
 fi
 
 # ------------------------------------------------------------------------------
-e_pending "Installing node LTS"
+e_pending "Installing nvm"
 # ------------------------------------------------------------------------------
 
-
 if has_command "nvm"; then
-  if ! has_path ".nvm/versions/node/"; then
-    get_consent "Install node LTS"
-    if has_consent; then
-      e_pending "Install node LTS"
-      nvm install --lts
-      test_path ".nvm/versions/node/"
-    fi
+  get_consent "Install node LTS"
+  if has_consent; then
+    e_pending "Install node LTS"
+    nvm install --lts
   fi
 fi

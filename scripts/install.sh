@@ -5,7 +5,7 @@ source _utils.sh
 source defaults.sh
 source directories.sh
 source tools.sh
-source npm.sh
+source node.sh
 source python-tools.sh
 source ruby-tools.sh
 source optimizations.sh

@@ -10,6 +10,16 @@ lsp.ensure_installed({
   'cssls',
   'prismals',
   'dockerls',
+  'bashls',
+  'jsonls',
+  'tailwindcss',
+  'cssmodules_ls',
+  'graphql',
+  'html',
+  'marksman',
+  'ruby_ls',
+  'sqlls',
+  'terraform_lsp',
 })
 
 -- Fix Undefined global 'vim'
