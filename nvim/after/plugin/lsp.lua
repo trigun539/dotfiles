@@ -19,7 +19,7 @@ lsp.ensure_installed({
   'marksman',
   'ruby_ls',
   'sqlls',
-  'terraform_lsp',
+  'terraformls',
 })
 
 -- Fix Undefined global 'vim'
