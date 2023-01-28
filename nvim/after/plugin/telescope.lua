@@ -4,7 +4,7 @@ local actions = require("telescope.actions")
 telescope.setup({
 	defaults = {
 		file_sorter = require("telescope.sorters").get_fzy_sorter,
-		file_ignore_patterns = { "node_modules", ".git", "cache", "dist" },
+		file_ignore_patterns = { "node_modules", ".git", "cache", "dist", "coverage" },
 		mappings = {
 			n = {
 				["q"] = actions.close,
