@@ -1,0 +1,15 @@
+~/dotfiles/configs/.zshrc ~/.zshrc
+~/dotfiles/configs/.bashrc ~/.bashrc
+~/dotfiles/configs/.profile ~/.profile
+~/dotfiles/configs/.gitconfig ~/.gitconfig
+~/dotfiles/configs/.tmux.conf ~/.tmux.conf
+~/dotfiles/configs/.prettierrc ~/.prettierrc
+~/dotfiles/configs/.taskrc ~/.taskrc
+~/dotfiles/configs/.gemrc ~/.gemrc
+~/dotfiles/configs/Brewfile ~/Brewfile
+~/dotfiles/karabiner-elements/pc-style-key-bindings.json ~/.config/karabiner/assets/complex_modifications/pc-style-bindings.json
+~/dotfiles/nvim ~/.config/nvim
+~/dotfiles/tmux/tmux-powerlinerc ~/.tmux-powerlinerc
+~/dotfiles/zsh/base.zsh ~/.oh-my-zsh/custom/base.zsh
+~/dotfiles/zsh/utils.zsh ~/.oh-my-zsh/custom/utils.zsh
+~/dotfiles/zsh/local.zsh ~/.oh-my-zsh/custom/local.zsh
