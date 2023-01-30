@@ -3,3 +3,4 @@ local.zsh
 nvim/node_modules
 nvim/plugin
 nvim/autoload
+Brewfile.lock.json
