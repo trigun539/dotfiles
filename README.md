@@ -45,14 +45,12 @@ This sets up a pretty good dev environment which focuses on the terminal. Using 
 # Last steps
 
 - Run `brew bundle` to install all brew packages
-- Install `base16-manager` themes
-  ```bash
-  base16-manager install chriskempson/base16-shell
-  ```
 - Open neovim by running: `nvim`:
-  - Run `:PackerInstall`.
+  - Run `:Ez`
+  - Navigate to `shared/nvim/lua/base/packer.lua` file
+  - Run `:so` to source packer
+  - Run `:PackerSync`.
 - Configure `git` user
-- Copy/clone `ultisnips` snippets repository to `~/.vim/ultisnips` directory
 - Confgure `iTerm`
 
 ![](iterm-opts.png 'iTerm settings')
