@@ -9,5 +9,5 @@
 ~/dotfiles/linux/configs/Brewfile ~/Brewfile
 ~/dotfiles/linux/zsh/base.zsh ~/.oh-my-zsh/custom/base.zsh
 ~/dotfiles/linux/zsh/utils.zsh ~/.oh-my-zsh/custom/utils.zsh
-~/dotfiles/linux/zsh/local.zsh ~/.oh-my-zsh/custom/local.zsh
+~/dotfiles/shared/zsh/local.zsh ~/.oh-my-zsh/custom/local.zsh
 ~/dotfiles/shared/nvim ~/.config/nvim
