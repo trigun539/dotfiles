@@ -3,14 +3,14 @@
 source _utils.sh
 
 # ------------------------------------------------------------------------------
-e_pending "Install packages"
+e_pending "Python libs"
 # ------------------------------------------------------------------------------
 
-get_consent "Install packges"
+get_consent "Install python libs"
 if has_consent; then
-  e_pending "Install packges"
-  while read -r package; do 
-    cmd="apt install -y ${package}"
+  e_pending "Install python libs"
+  while read -r lib; do 
+    cmd="pip3 install --user --upgrade ${lib}"
     eval "$cmd"
-  done < files/packages.txt
+  done < files/python-libs.txt
 fi
