@@ -3,14 +3,14 @@
 source ~/dotfiles/shared/scripts/_utils.sh
 
 # ------------------------------------------------------------------------------
-e_pending "Generating Symlinks"
+e_pending "Python libs"
 # ------------------------------------------------------------------------------
 
-get_consent "Create symlinks"
+get_consent "Install python libs"
 if has_consent; then
-  e_pending "Create symlinks"
-  while read -r source link; do 
-    cmd="ln -sf ${source} ${link}"
+  e_pending "Install python libs"
+  while read -r lib; do 
+    cmd="pip3 install --user --upgrade ${lib}"
     eval "$cmd"
-  done < ~/dotfiles/osx/files/symlinks.txt
+  done < ~/dotfiles/shared/files/python-libs.txt
 fi

@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
 		use("myusuf3/numbers.vim")
 		use("norcalli/nvim-colorizer.lua")
 		use("glepnir/dashboard-nvim")
+    use("chriskempson/base16-vim")
 		-- LSP
     use {
       'VonHeikemen/lsp-zero.nvim',

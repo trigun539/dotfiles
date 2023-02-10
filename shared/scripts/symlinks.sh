@@ -12,5 +12,5 @@ if has_consent; then
   while read -r source link; do 
     cmd="ln -sf ${source} ${link}"
     eval "$cmd"
-  done < ~/dotfiles/osx/files/symlinks.txt
+  done < ~/dotfiles/shared/files/symlinks.txt
 fi

@@ -1,0 +1,4 @@
+# Files
+data.location=~/.task
+# Color theme (uncomment one to use)
+include dark-256.theme

@@ -39,8 +39,8 @@ vim.opt.backup = false -- No backup
 
 -- User Interface
 
+vim.opt.termguicolors = true
 vim.opt.cursorline = true
-vim.g.colors_name = 'dracula' -- Theme
 vim.opt.title = true
 vim.opt.number = true
 vim.opt.background = 'dark'
@@ -48,6 +48,12 @@ vim.opt.showcmd = true
 vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
 vim.opt.scrolloff = 10
+-- Lua:
+-- vim.cmd[[colorscheme dracula]]
+-- vim.cmd.colorscheme('dracula')
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "none"})
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none"})
+-- vim.g.colors_name = 'dracula' -- Theme
 
 -- No Sounds/Bells
 

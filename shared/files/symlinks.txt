@@ -1,0 +1,12 @@
+~/dotfiles/shared/configs/.bashrc ~/.bashrc
+~/dotfiles/shared/configs/.profile ~/.profile
+~/dotfiles/shared/configs/.gitconfig ~/.gitconfig
+~/dotfiles/shared/configs/.tmux.conf ~/.tmux.conf
+~/dotfiles/shared/configs/.prettierrc ~/.prettierrc
+~/dotfiles/shared/configs/.taskrc ~/.taskrc
+~/dotfiles/shared/configs/.gemrc ~/.gemrc
+~/dotfiles/shared/configs/.zshrc ~/.zshrc
+~/dotfiles/shared/nvim ~/.config/nvim
+~/dotfiles/shared/zsh/base.zsh ~/.oh-my-zsh/custom/base.zsh
+~/dotfiles/shared/zsh/utils.zsh ~/.oh-my-zsh/custom/utils.zsh
+~/dotfiles/local.zsh ~/.oh-my-zsh/custom/local.zsh

@@ -1,0 +1,4 @@
+~/dotfiles/osx/configs/Brewfile ~/Brewfile
+~/dotfiles/osx/configs/alacritty/ ~/.config/alacritty
+~/dotfiles/osx/karabiner-elements/pc-style-key-bindings.json ~/.config/karabiner/assets/complex_modifications/pc-style-bindings.json
+~/dotfiles/osx/zsh/osx.zsh ~/.oh-my-zsh/custom/osx.zsh

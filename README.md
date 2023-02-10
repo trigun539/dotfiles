@@ -46,7 +46,7 @@ This sets up a pretty good dev environment which focuses on the terminal. Using 
 
 - Run `brew bundle` to install all brew packages
 - Open neovim by running: `nvim`:
-  - Run `:Ez`
+  - Run `:Ex`
   - Navigate to `shared/nvim/lua/base/packer.lua` file
   - Run `:so` to source packer
   - Run `:PackerSync`.

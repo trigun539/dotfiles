@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source _utils.sh
+source ~/dotfiles/shared/scripts/_utils.sh
 
 # ------------------------------------------------------------------------------
 e_pending "Creating defaults"
@@ -35,17 +35,16 @@ if has_consent; then
   killall Dock
 fi
 
+# TODO: Add ability to disable natural scrolling
+# get_consent "Disable natural scrolling"
+# if has_consent; then
+#   e_pending "Disable natural scrolling"
+#   defaults write -g com.apple.swipescrolldirection -bool NO
+# fi
+
 get_consent "Install Xcode tools"
 if has_command "xcode-select"; then
   e_pending "Installing xcode-select (CLI tools)"
   xcode-select --install
   test_command "xcode-select"
-fi
-
-get_consent "Install Homebrew"
-if ! has_command "brew"; then
-  e_pending "Installing Homebrew"
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  brew doctor
-  test_command "brew"
 fi

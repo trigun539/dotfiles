@@ -1,5 +1,0 @@
-neovim
-fastlane
-rails
-ruby-lsp
-bundler
