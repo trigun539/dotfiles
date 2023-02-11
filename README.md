@@ -18,7 +18,6 @@ This sets up a pretty good dev environment which focuses on the terminal. Using 
 - Vim
 - NeoVim
 - Tmux
-  - Tmux-Powerline
 - Base16 - shell
 - Oh My ZSH
 - Fira Code Nerd Font
