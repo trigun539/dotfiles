@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source _utils.sh
+source ~/dotfiles/shared/scripts/_utils.sh
 
 # ------------------------------------------------------------------------------
 e_pending "Cleaning"
@@ -12,7 +12,7 @@ if has_consent; then
   while read -r source link; do 
     cmd="rm ${link}"
     eval "$cmd"
-  done < files/symlinks.txt
+  done < ~/dotfiles/shared/files/symlinks.txt
 fi
 
 get_consent "Remove directories"
@@ -21,7 +21,7 @@ if has_consent; then
   while read -r dirLoc; do 
     cmd="rm -rf ${dirLoc}"
     eval "$cmd"
-  done < files/directories.txt
+  done < ~/dotfiles/shared/files/directories.txt
 fi
 
 get_consent "Remove Git repos"
@@ -30,7 +30,11 @@ if has_consent; then
   while read -r url dirLoc; do 
     cmd="rm -rf ${dirLoc}"
     eval "$cmd"
-  done < files/repos.txt
+  done < ~/dotfiles/shared/files/repos.txt
 fi
 
-# TODO: Clean up plugins installed by packer, tmp, oh-my-zsh
+get_consent "Remove Packer Plugins, Cache"
+if has_consent; then
+  e_pending "Removing Packer Plugins, Cache"
+  rm -rf ~/.local/share/nvim
+fi

@@ -6,10 +6,6 @@ This sets up a pretty good dev environment which focuses on the terminal. Using 
 
 - Install Xcode and run `xcode-install`
 - Install [homebrew](https://brew.sh)
-  ```bash
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  brew doctor
-  ```
 - Install Git: `brew install git`
 - Clone repo: `git clone git@github.com:trigun539/dotfiles.git`
 
@@ -39,12 +35,11 @@ This sets up a pretty good dev environment which focuses on the terminal. Using 
 ## Install Instructions
 
 - Clone this repo
-- Install `Fira Code Nerd Font` by dragging font files under `fonts/` to `Font Book`
-- Run `cd scripts && sh install.sh`
+- Install `Fira Code Nerd Font` by dragging font files under `shared/fonts/` to `Font Book`
+- Run `./install.sh`
 
 # Last steps
 
-- Run `brew bundle` to install all brew packages
 - Open neovim by running: `nvim`:
   - Run `:Ex`
   - Navigate to `shared/nvim/lua/base/packer.lua` file
@@ -63,7 +58,7 @@ This sets up a pretty good dev environment which focuses on the terminal. Using 
 
 ## Clean up
 
-Run `sh script/clean.sh` to clean up and remove directories, repos, symlinks added.
+Run `./clean.sh` to clean up and remove directories, repos, symlinks added.
 
 ## TODO:
 
