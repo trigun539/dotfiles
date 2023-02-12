@@ -4,7 +4,6 @@
 
 GEM_HOME=$HOME/.gem
 GEM_PATH=$HOME/.gem
-export JAVA_HOME=$(/usr/libexec/java_home)
 
 export PATH="/usr/bin:$PATH"
 export PATH="/usr/sbin:$PATH"
