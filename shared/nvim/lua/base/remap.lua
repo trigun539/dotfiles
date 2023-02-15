@@ -59,3 +59,7 @@ nnoremap("<leader>gp", ":Git push<CR>", "silent", "Git commit")
 
 nnoremap("<leader>ce", ":ChatGPT<CR>", "silent", "Open ChatGPT")
 nnoremap("<leader>ct", ":ChatGPTActAs<CR>", "silent", "Open ChatGPT As")
+
+-- Github Copilot
+
+inoremap("C-a", ":copilot#Accept('<CR>')", "silent", "Copilot Accept")

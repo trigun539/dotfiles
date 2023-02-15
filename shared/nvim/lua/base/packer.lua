@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
 		use("mg979/vim-visual-multi")
 		use("wesQ3/vim-windowswap")
 		use("ruanyl/vim-gh-line")
+		use("github/copilot.vim")
 		-- Themes
 		use("Mofiqul/dracula.nvim")
 		-- use("navarasu/onedark.nvim")
