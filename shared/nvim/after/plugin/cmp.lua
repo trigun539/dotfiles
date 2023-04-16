@@ -25,8 +25,20 @@ cmp.setup({
       c = cmp.mapping.close(),
     }),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    ['<Tab>'] = function(fallback)
-      if cmp.visible() then
+    -- ['<Tab>'] = function(fallback)
+    --   if cmp.visible() then
+    --     cmp.select_next_item()
+    --   else
+    --     fallback()
+    --   end
+    -- end,
+    ["<Tab>"] = function(fallback)
+      local suggestion = require("copilot.suggestion")
+      print("suggestion.is_visible()", suggestion.is_visible())
+
+      if suggestion.is_visible() then
+        suggestion.accept()
+      elseif cmp.visible() then
         cmp.select_next_item()
       else
         fallback()
