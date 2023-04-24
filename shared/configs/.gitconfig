@@ -46,4 +46,7 @@
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [feature]
-	manyFiles = 1
+  manyFiles = 1
+[user]
+  name = ${GIT_USER_NAME}
+  email = ${GIT_USER_EMAIL}
