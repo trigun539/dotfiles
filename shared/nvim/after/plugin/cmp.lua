@@ -25,6 +25,10 @@ cmp.setup({
       c = cmp.mapping.close(),
     }),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<Tab>'] = {
+      i = cmp.mapping.abort(),
+      c = cmp.config.disable
+    }
   },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
