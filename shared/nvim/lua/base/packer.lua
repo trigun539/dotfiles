@@ -45,6 +45,10 @@ return require('packer').startup(function(use)
         {'rafamadriz/friendly-snippets'}, -- Optional
       }
     }
+    use {
+      "jose-elias-alvarez/null-ls.nvim",
+      requires = { "nvim-lua/plenary.nvim" },
+    }
 		-- Treesitter
 		use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 		-- Completion

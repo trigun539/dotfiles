@@ -47,5 +47,20 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
+lsp.format_on_save({
+  format_opts = {
+    async = false,
+    timeout_ms = 10000,
+  },
+  servers = {
+    -- ['lua_ls'] = {'lua'},
+    -- ['rust_analyzer'] = {'rust'},
+    -- ['tsserver'] = {'typescript', 'javascript', 'typescriptreact'},
+    -- if you have a working setup with null-ls
+    -- you can specify filetypes it can format.
+    ['null-ls'] = {'javascript', 'typescript', 'typescriptreact', 'lua', 'rust', 'css', 'html', 'json', 'yaml', 'markdown', 'python', 'dockerfile', 'graphql', 'bash', 'ruby', 'sql', 'terraform'},
+  }
+})
+
 lsp.nvim_workspace()
 lsp.setup()
