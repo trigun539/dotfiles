@@ -57,7 +57,7 @@ alias dvls="docker volume ls"
 alias dvrm="docker volume rm"
 
 # Remove all volumes
-alias dvrma="docker volume rm $(docker volume ls -q)"
+dvrma() { docker volume rm $(docker volume ls -q); }
 
 # Get container IP
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
