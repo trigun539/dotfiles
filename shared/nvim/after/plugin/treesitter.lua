@@ -33,7 +33,7 @@ treesitter.setup({
 	auto_install = true,
 
 	-- List of parsers to ignore installing (for "all")
-	ignore_install = { "javascript" },
+	ignore_install = {},
 
 	---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
 	-- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
@@ -45,7 +45,7 @@ treesitter.setup({
 		-- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
 		-- the name of the parser)
 		-- list of language that will be disabled
-		disable = { "c", "rust", "javascript" },
+		disable = { "c", "rust" },
 
 		-- Setting this to true will run `:h syntax` and tree-sitter at the same time.
 		-- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
@@ -66,4 +66,4 @@ treesitter.setup({
 
 local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 
-parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
+parser_config.tsx.filetype_to_parsername = { "typescript.tsx" }
