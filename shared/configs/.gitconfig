@@ -47,3 +47,5 @@
 	insteadOf = https://github.com/
 [feature]
   manyFiles = 1
+[init]
+	defaultBranch = main

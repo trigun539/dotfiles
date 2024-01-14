@@ -23,6 +23,7 @@ treesitter.setup({
 		"dockerfile",
 		"python",
 		"ruby",
+		"terraform",
 	},
 
 	-- Install parsers synchronously (only applied to `ensure_installed`)
