@@ -146,10 +146,9 @@ awscp() {
   then
     echo 'No profile name provided'
   else
-    if grep -Fxq "AWS_PROFILE" ~/dotfiles/local.zsh
+    if grep "AWS_PROFILE" ~/dotfiles/local.zsh
     then
-      gsed -i "s/AWS_PROFILE=$(awsp)/AWS_PROFILE=$1/g" ~/dotfiles/local.zsh
-        # code if found
+      sed -i -e "s/$(awsp)/$1/g" ~/dotfiles/local.zsh
     else
       echo "export AWS_PROFILE=$1" >> ~/dotfiles/local.zsh
     fi
