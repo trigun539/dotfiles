@@ -142,8 +142,20 @@ awsll() {
   aws configure list-profiles
 }
 awscp() {
-  gsed -i "s/AWS_PROFILE=$(awsp)/AWS_PROFILE=$1/g" ~/dotfiles/local.zsh
-  source ~/dotfiles/local.zsh
+  if [[ $# -eq 0 ]] ;
+  then
+    echo 'No profile name provided'
+  else
+    if grep -Fxq "AWS_PROFILE" ~/dotfiles/local.zsh
+    then
+      gsed -i "s/AWS_PROFILE=$(awsp)/AWS_PROFILE=$1/g" ~/dotfiles/local.zsh
+        # code if found
+    else
+      echo "export AWS_PROFILE=$1" >> ~/dotfiles/local.zsh
+    fi
+
+    source ~/dotfiles/local.zsh
+  fi
 }
 awsp() {
   echo "$AWS_PROFILE"
