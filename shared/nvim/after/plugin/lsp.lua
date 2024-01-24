@@ -19,7 +19,6 @@ lsp.ensure_installed({
 	"sqlls",
 	"terraformls",
 	"lua_ls",
-	"java_language_server",
 	"jdtls",
 })
 
@@ -35,7 +34,7 @@ lsp.configure("lua_ls", {
 })
 
 -- Java setup
-require("lspconfig").jdtls.setup({ cmd = { "jdtls" } })
+-- require("lspconfig").jdtls.setup({ cmd = { "jdtls" }, filetypes = { "java" } })
 
 lsp.on_attach(function(client, bufnr)
 	local opts = { buffer = bufnr, remap = false }

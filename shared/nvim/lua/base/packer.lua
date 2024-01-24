@@ -48,6 +48,8 @@ return require("packer").startup(function(use)
 			{ "rafamadriz/friendly-snippets" }, -- Optional
 		},
 	})
+	use("mfussenegger/nvim-dap")
+	use("mfussenegger/nvim-jdtls")
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
