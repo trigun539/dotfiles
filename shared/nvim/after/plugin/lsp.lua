@@ -1,5 +1,4 @@
 local lsp = require("lsp-zero")
-local cmp = require("cmp")
 
 lsp.preset("recommended")
 lsp.ensure_installed({
@@ -21,6 +20,7 @@ lsp.ensure_installed({
 	"terraformls",
 	"lua_ls",
 	"java_language_server",
+	"jdtls",
 })
 
 -- Fix Undefined global 'vim'
@@ -33,6 +33,9 @@ lsp.configure("lua_ls", {
 		},
 	},
 })
+
+-- Java setup
+require("lspconfig").jdtls.setup({ cmd = { "jdtls" } })
 
 lsp.on_attach(function(client, bufnr)
 	local opts = { buffer = bufnr, remap = false }
