@@ -17,7 +17,7 @@ nnoremap("n", "nzz")
 nnoremap("N", "Nzz")
 
 -- Replace without losing clipboard
-xnoremap("<leader>p", "\"_dP")
+xnoremap("<leader>p", '"_dP')
 
 -- Telescope
 nnoremap("<leader>ff", "<cmd>lua require('telescope.builtin').find_files({hidden = true})<CR>", "silent", "Files")
@@ -37,7 +37,7 @@ nnoremap("<leader>fx", "<cmd>lua require('telescope-config').search_dotfiles()<C
 nnoremap("<leader>fd", "<cmd>lua require('telescope-config').git_branches()<CR>", "silent", "Git Branches")
 nnoremap("<leader>fx", "<cmd>lua require('telescope-config').dir_grep()<CR>", "silent", "Grep in Dir")
 nnoremap("<leader>fw", function()
-  require("telescope.builtin").grep_string({ search = vim.fn.input("Grep >")})
+	require("telescope.builtin").grep_string({ search = vim.fn.input("Grep >") })
 end, "silent", "Grep Text")
 
 -- Nvim Tree
@@ -63,3 +63,11 @@ nnoremap("<leader>ct", ":ChatGPTActAs<CR>", "silent", "Open ChatGPT As")
 -- Github Copilot
 
 inoremap("C-a", ":copilot#Accept('<CR>')", "silent", "Copilot Accept")
+
+-- Trouble
+
+nnoremap("<leader>xx", "<cmd>TroubleToggle<cr>", "silent", "Trouble Toggle")
+nnoremap("<leader>xw", "<cmd>Trouble lsp_workspace_diagnostics<cr>", "silent", "Trouble Workspace Diagnostics")
+nnoremap("<leader>xd", "<cmd>Trouble lsp_document_diagnostics<cr>", "silent", "Trouble Document Diagnostics")
+nnoremap("<leader>xl", "<cmd>Trouble loclist<cr>", "silent", "Trouble Loclist")
+nnoremap("<leader>xq", "<cmd>Trouble quickfix<cr>", "silent", "Trouble Quickfix")

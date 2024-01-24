@@ -24,6 +24,7 @@ treesitter.setup({
 		"python",
 		"ruby",
 		"terraform",
+		"java",
 	},
 
 	-- Install parsers synchronously (only applied to `ensure_installed`)

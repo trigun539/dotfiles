@@ -20,6 +20,7 @@ lsp.ensure_installed({
 	"sqlls",
 	"terraformls",
 	"lua_ls",
+	"java_language_server",
 })
 
 -- Fix Undefined global 'vim'
@@ -97,6 +98,7 @@ lsp.format_on_save({
 			"ruby",
 			"sql",
 			"terraform",
+			"java",
 		},
 	},
 })
