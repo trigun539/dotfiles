@@ -2,9 +2,9 @@
 # GENERAL
 # ------------------------------------
 
-if [ exa ];
+if [ eza ];
 then
-  alias ll='exa -l --icons'
+  alias ll='eza -l --icons'
 else
   alias ll='ls -alf'
 fi

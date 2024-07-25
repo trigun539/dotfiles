@@ -31,15 +31,10 @@ source $(brew --prefix)/etc/profile.d/z.sh
 eval "$(rbenv init - zsh)"
 
 ############################################################################
-# BASE SHELL
+# RUST
 ############################################################################
 
-BASE16_SHELL="$HOME/.config/base16-shell"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        source "$BASE16_SHELL/profile_helper.sh"
-
-base16_dracula
+source "$HOME/.cargo/env"
 
 ############################################################################
 # GIT
