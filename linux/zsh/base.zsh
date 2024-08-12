@@ -9,6 +9,7 @@ export PATH="/usr/bin:$PATH"
 export PATH="/usr/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/opt/X11/bin:$PATH"
+export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 
 ############################################################################
 # VIM FZF
@@ -21,13 +22,21 @@ export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
 ############################################################################
 
 export NVM_DIR="$HOME/.nvm"
-source $(brew --prefix nvm)/nvm.sh
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+############################################################################
+# SDKMAN
+############################################################################
+
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 ############################################################################
 # Z
 ############################################################################
 
-source $(brew --prefix)/etc/profile.d/z.sh
+# source $(brew --prefix)/etc/profile.d/z.sh
 
 ############################################################################
 # RUBY
