@@ -95,7 +95,7 @@ dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/[
 # DOCKER COMPOSE
 # ------------------------------------
 
-dcup() { docker-compose up $1; }
+dcup() { docker-compose up -d $1; }
 dcpull() { docker-compose pull $1; }
 dcstop() { docker-compose stop $1; }
 dcdown() { docker-compose down $1; }
