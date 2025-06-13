@@ -1,6 +1,9 @@
 local treesitter = require("nvim-treesitter.configs")
 
 treesitter.setup({
+	branch = "main",
+	build = ":TSUpdate", -- Update parsers on startup
+
 	-- A list of parser names, or "all" (the five listed parsers should always be installed)
 	ensure_installed = {
 		"dot",
@@ -28,6 +31,10 @@ treesitter.setup({
 		"groovy",
 		"xml",
 		"dockerfile",
+		"markdown",
+		"markdown_inline",
+		"vim",
+		"graphql",
 	},
 
 	-- Install parsers synchronously (only applied to `ensure_installed`)
