@@ -35,6 +35,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
