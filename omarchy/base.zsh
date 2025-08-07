@@ -15,7 +15,7 @@ export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 # MISE
 ############################################################################
 
-echo 'eval "$(~/.local/bin/mise activate zsh)"'
+eval "$(~/.local/bin/mise activate zsh)"
 
 ############################################################################
 # VIM FZF
