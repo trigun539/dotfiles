@@ -5,3 +5,5 @@ nvim/plugin
 nvim/autoload
 Brewfile.lock.json
 packer_compiled.lua
+*.log
+local.sh
