@@ -2,8 +2,7 @@
 # GENERAL
 # ------------------------------------
 
-if [ eza ];
-then
+if [ eza ]; then
   alias ll='eza -l --icons'
 else
   alias ll='ls -alf'
@@ -14,6 +13,21 @@ alias fhere="find . -name "
 alias myip="curl http://ipecho.net/plain; echo"
 
 export REACT_EDITOR=nvim
+
+# ------------------------------------
+# GIT
+# ------------------------------------
+
+alias gb="git branch"
+alias gco="git checkout"
+alias gcb="git checkout -b "
+alias gst="git status"
+alias ggl="git pull"
+alias ggp="git push"
+alias ggf="git push --force"
+alias gaa="git add -A ."
+alias gcmsg="git commit -m "
+alias gcme="git --amend --no-edit"
 
 # ------------------------------------
 # TMUX
@@ -75,7 +89,7 @@ dstop() { docker stop $(docker ps -a -q); }
 drm() { docker rm $(docker ps -a -q); }
 
 # Stop and Remove all containers
-alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
+alias drmf="docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)"
 
 # Remove image
 dri() { docker rmi $1; }
@@ -89,7 +103,7 @@ driall() { docker rmi $(docker images -q --filter "dangling=true"); }
 dbu() { docker build -t=$1 .; }
 
 # Show all alias related docker
-dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
+dalias() { alias | grep "docker" | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/" | sed "s/['|\']//g" | sort; }
 
 # ------------------------------------
 # DOCKER COMPOSE
@@ -101,59 +115,3 @@ dcstop() { docker-compose stop $1; }
 dcdown() { docker-compose down $1; }
 dcbuild() { docker-compose build $1; }
 dclogs() { docker-compose logs -f $1; }
-
-# ------------------------------------
-# TERRAFORM
-# ------------------------------------
-
-alias tfi="terraform init"
-alias tfc="terraform console"
-alias tff="terraform fmt"
-alias tfv="terraform validate"
-alias tfp="terraform plan"
-alias tfa="terraform apply"
-alias tfaa="terraform apply --auto-approve"
-alias tfd="terraform destroy"
-alias tfda="terraform destroy --auto-approve"
-
-# ------------------------------------
-# ANSIBLE
-# ------------------------------------
-
-# Run playbook
-arb() { ansible-playbook $1 -i "$HOME/environments/personal/inventory" --extra-vars="target=$2" -K; }
-arv() { ansible-playbook --ask-vault-pass $1 -i "$HOME/environments/personal/inventory" --extra-vars="target=$2" -K; }
-
-# Ansible vault
-avc() { ansible-vault create $1}
-ave() { ansible-vault edit $1}
-aven() { ansible-vault encrypt $1}
-avde() { ansible-vault decrypt $1}
-
-# ------------------------------------
-# AWS
-# ------------------------------------
-
-# Switch aws default profiles
-awsll() {
-  aws configure list-profiles
-}
-awscp() {
-  gsed -i "s/AWS_PROFILE=$(awsp)/AWS_PROFILE=$1/g" ~/dotfiles/local.zsh
-  source ~/dotfiles/local.zsh
-}
-awsp() {
-  echo "$AWS_PROFILE"
-}
-
-# Make private s3 bucket
-awsmbp() { aws s3api create-bucket --bucket $1 --region us-east-1 --acl private; }
-awsS3Block() { aws s3api put-public-access-block \
-    --bucket $1 \
-    --public-access-block-configuration "BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true"}
-
-# ------------------------------------
-# Task utils
-# ------------------------------------
-
-alias tskui="taskwarrior-tui"
